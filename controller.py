@@ -13,6 +13,7 @@ class Controller:
         assert 0 <= r <= 255
         assert 0 <= g <= 255
         assert 0 <= b <= 255
+        assert ((r + g + b) == 255)
         hex_str = get_rgb_hex(r, g, b)
         write_data(self.address, hex_str)
         print(f"Changed color to {rgb}")
